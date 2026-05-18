@@ -43,6 +43,26 @@
 		});
 	}
 
+	function updateDeck(deck) {
+		deck.updated_at = new Date();
+
+		fetch(`http://localhost:3000/decks/${deck.id}`, {
+			method: "PUT",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(deck)
+		}).then((res) => {
+			const result = res.json();
+
+			kanbanStoreWritable.update(currentState => {
+				return {
+					...currentState
+				}
+			})
+		})
+	}
+
 	function deleteDeck() {
 		const updatedDeckList = $kanbanStoreWritable.decks.filter(d => d.id != deck.id) ?? [];
 

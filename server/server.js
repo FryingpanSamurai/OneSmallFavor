@@ -27,6 +27,7 @@ app.put("/decks/:id", async (req,res) => {
   const id = req.params.id;
   const name = req.body.name;
   const description = req.body.description;
+  const updated_at = req.body.updated_at;
   await pool.query("UPDATE deck SET name=$1, description=$2, updated_at=$4 WHERE id=$3", [name, description, id, updated_at]);
   res.json({ message: "Success" });
 });
