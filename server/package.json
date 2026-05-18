@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "back end for todo",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "res.send('hello world')",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "pg": "^8.20.0",
+    "uuid": "^14.0.0"
+  }
+}

@@ -2,11 +2,10 @@
 
 <div class="topbar-container">
 	<!-- Brand -->
-	<span class="brand-icon"><img src="cyberdeck.jpg" class="brand-logo" alt=""></span>
+	<span class="brand-icon">
+		<img src="" class="brand-logo" alt="">
+	</span>
 	<!-- in the top bar we will simply have a login/logout, maybe a search -->
-	<button class="login-btn">
-		Login
-	</button>
 </div>
 
 <style>
@@ -20,6 +19,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 10px;
+		height: 44px;
 	}
 
 	.login-btn {

@@ -1,7 +1,7 @@
 <script>
-	import SideBar from '../components/SideBar.svelte';
-	import TopBar from '../components/TopBar.svelte';
-	import CyberDeck from '../components/CyberDeck.svelte';
+	import SideBar from '../components/Nav/SideBar.svelte';
+	import TopBar from '../components/Nav/TopBar.svelte';
+	import Kanban from '../components/Kanban/Kanban.svelte';
 </script>
 
 <div class="page-container">
@@ -11,9 +11,7 @@
 		<!-- side nav -->
 		<SideBar />
 		<!-- board container -->
-		<CyberDeck />
-			<!-- columns for todo, doing, done -->
-				<!-- Tasks will populate the columns -->
+		<Kanban />
 	</div>
 </div>
 
@@ -26,5 +24,6 @@
 
 	.board-and-bar {
 		display: flex;
+		height: calc(100% - 64px);
 	}
 </style>
